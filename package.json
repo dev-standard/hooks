@@ -30,6 +30,8 @@
     "dist"
   ],
   "scripts": {
+    "test": "unbuild && vitest",
+    "coverage": "unbuild && vitest run --coverage",
     "lint": "eslint .",
     "format": "eslint --fix .",
     "commit": "git-cz",
@@ -51,7 +53,8 @@
     "lint-staged": "^13.1.0",
     "release-it": "^15.6.0",
     "simple-git-hooks": "^2.8.1",
-    "unbuild": "^1.1.1"
+    "unbuild": "^1.1.1",
+    "vitest": "^0.28.2"
   },
   "config": {
     "commitizen": {
