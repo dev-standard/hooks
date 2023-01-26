@@ -24,6 +24,7 @@ const path8 = 'test/.'
 const path9 = '/test/.'
 const path10 = 'test/..'
 const path11 = '/test/..'
+const percentage = '100%'
 
 describe('test useJudge', () => {
   test('test isString', () => {
@@ -294,5 +295,33 @@ describe('test useJudge', () => {
     expect(isAbsolutePath(path9)).toBe(true)
     expect(isAbsolutePath(path10)).toBe(false)
     expect(isAbsolutePath(path11)).toBe(true)
+  })
+
+  test('test isPercentage', () => {
+    const { isPercentage } = useJudge()
+    expect(isPercentage(undefined)).toBe(false)
+    expect(isPercentage(null)).toBe(false)
+    expect(isPercentage(str)).toBe(false)
+    expect(isPercentage(numInt)).toBe(false)
+    expect(isPercentage(numFloat)).toBe(false)
+    expect(isPercentage(numMaxValue)).toBe(false)
+    expect(isPercentage(numMaxSafeValue)).toBe(false)
+    expect(isPercentage(numInfinity)).toBe(false)
+    expect(isPercentage(numNaN)).toBe(false)
+    expect(isPercentage(obj)).toBe(false)
+    expect(isPercentage(arr)).toBe(false)
+    expect(isPercentage(func)).toBe(false)
+    expect(isPercentage(path1)).toBe(false)
+    expect(isPercentage(path2)).toBe(false)
+    expect(isPercentage(path3)).toBe(false)
+    expect(isPercentage(path4)).toBe(false)
+    expect(isPercentage(path5)).toBe(false)
+    expect(isPercentage(path6)).toBe(false)
+    expect(isPercentage(path7)).toBe(false)
+    expect(isPercentage(path8)).toBe(false)
+    expect(isPercentage(path9)).toBe(false)
+    expect(isPercentage(path10)).toBe(false)
+    expect(isPercentage(path11)).toBe(false)
+    expect(isPercentage(percentage)).toBe(true)
   })
 })
