@@ -4,7 +4,9 @@ import { useImport } from '../useImport'
 
 const { isNumber } = useJudge()
 const { importJson } = useImport()
+
 // last updated: 2022-06-08
+// https://www.iana.org/assignments/http-status-codes/http-status-codes.xml
 const statusInfo = importJson('./iana.json')
 
 export const useStatus = () => {
