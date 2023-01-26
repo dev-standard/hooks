@@ -1,3 +1,3 @@
-# template-ts
+# Hooks
 
-a universal template for typescript
+A collection of generic hooks
