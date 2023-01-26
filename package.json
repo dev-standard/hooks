@@ -128,7 +128,7 @@
       }
     },
     "hooks": {
-      "after:bump": "npx unbuild",
+      "after:bump": "npx vitest && npx unbuild",
       "after:git:release": "git push origin HEAD"
     }
   }
