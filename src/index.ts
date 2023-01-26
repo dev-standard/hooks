@@ -1,1 +1,1 @@
-export const str = 'Hello, template-ts !'
+export * from './useJudge'

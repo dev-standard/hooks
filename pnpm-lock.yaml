@@ -7,6 +7,7 @@ specifiers:
   '@commitlint/cz-commitlint': ^17.4.2
   '@release-it/conventional-changelog': ^5.1.1
   '@tsconfig/node-lts-strictest': ^18.12.1
+  '@types/node': ^18.11.18
   commitizen: ^4.3.0
   eslint: ^8.32.0
   inquirer: '8'
@@ -22,6 +23,7 @@ devDependencies:
   '@commitlint/cz-commitlint': 17.4.2_i4x6owxztfhigiiqlxwntt4k24
   '@release-it/conventional-changelog': 5.1.1_release-it@15.6.0
   '@tsconfig/node-lts-strictest': 18.12.1
+  '@types/node': 18.11.18
   commitizen: 4.3.0
   eslint: 8.32.0
   inquirer: 8.2.5
