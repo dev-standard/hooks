@@ -49,7 +49,7 @@ export const useJudge = () => {
     if (!isString(str))
       return false
     str = (str as string).trim()
-    return isNumber(Number((str as string).slice(0, -1))) && (str as string).endsWith('%')
+    return isFinite(Number((str as string).slice(0, -1))) && (str as string).endsWith('%')
   }
 
   const isAngle = (str: any) => {
