@@ -39,9 +39,6 @@
     "build": "unbuild",
     "prepare": "git config core.hooksPath .git/hooks/ && npx simple-git-hooks"
   },
-  "dependencies": {
-    "fs-extra": "^11.1.0"
-  },
   "devDependencies": {
     "@antfu/eslint-config-ts": "^0.34.1",
     "@commitlint/cli": "^17.4.2",

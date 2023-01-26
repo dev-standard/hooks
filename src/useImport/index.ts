@@ -1,14 +1,15 @@
-import { resolve } from 'path'
-import { readFileSync } from 'fs-extra'
-import type { JFReadOptions } from 'jsonfile'
+import { dirname, resolve } from 'path'
+import { readFileSync } from 'fs'
 import { useJudge } from '../useJudge'
+import { useStack } from '../useStack'
+
+const { isAbsolutePath } = useJudge()
+const { getStackInfo } = useStack()
 
 export const useImport = () => {
-  const { isAbsolutePath } = useJudge()
-  const importJson = (path: string, options: JFReadOptions = undefined) => {
-    path = isAbsolutePath(path) ? path : resolve(__dirname, path)
-    // @ts-expect-error options type
-    return readFileSync(path, options)
+  const importJson = (path: string, options?: { encoding: 'utf-8' }) => {
+    path = isAbsolutePath(path) ? path : resolve(dirname(getStackInfo()[3] as string), path)
+    return JSON.parse(readFileSync(path, options) as string)
   }
 
   return { importJson }
