@@ -324,4 +324,16 @@ describe('test useJudge', () => {
     expect(isPercentage(path11)).toBe(false)
     expect(isPercentage(percentage)).toBe(true)
   })
+
+  test('test isAngle', () => {
+    const { isAngle } = useJudge()
+    expect(isAngle(undefined)).toBe(false)
+    expect(isAngle(null)).toBe(false)
+    expect(isAngle('1deg')).toBe(true)
+    expect(isAngle('a1deg')).toBe(false)
+    expect(isAngle('1grad')).toBe(true)
+    expect(isAngle('1rad')).toBe(true)
+    expect(isAngle('1turn')).toBe(true)
+    expect(isAngle('test')).toBe(false)
+  })
 })

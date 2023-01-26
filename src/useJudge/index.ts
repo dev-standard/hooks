@@ -52,6 +52,14 @@ export const useJudge = () => {
     return isNumber(Number((str as string).slice(0, -1))) && (str as string).endsWith('%')
   }
 
+  const isAngle = (str: any) => {
+    if (!isString(str))
+      return false
+    str = (str as string).trim().toLowerCase()
+    const ANGLE_UNIT = ['deg', 'grad', 'rad', 'turn']
+    return ANGLE_UNIT.some(unit => (str as string).endsWith(unit) && isFinite(Number((str as string).slice(0, -unit.length))))
+  }
+
   return {
     isString,
     isNumber,
@@ -64,5 +72,6 @@ export const useJudge = () => {
     isRelativePath,
     isAbsolutePath,
     isPercentage,
+    isAngle,
   }
 }
