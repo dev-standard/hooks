@@ -20,6 +20,9 @@ specifiers:
   unbuild: ^1.1.1
   vitest: ^0.28.2
 
+dependencies:
+  consola: 2.15.3
+
 devDependencies:
   '@antfu/eslint-config-ts': 0.34.1_eslint@8.32.0
   '@commitlint/cli': 17.4.2
@@ -31,7 +34,6 @@ devDependencies:
   '@types/node': 18.11.18
   '@vitest/coverage-c8': 0.28.2
   commitizen: 4.3.0
-  consola: 2.15.3
   eslint: 8.32.0
   inquirer: 8.2.5
   lint-staged: 13.1.0
@@ -2004,7 +2006,6 @@ packages:
 
   /consola/2.15.3:
     resolution: {integrity: sha512-9vAdYbHj6x2fLKC4+oPH0kFzY/orMZyG2Aj+kNylHxKGJ/Ed4dpNyAQYwJOdqO4zdM7XpVHmyejQDcQHrnuXbw==}
-    dev: true
 
   /conventional-changelog-angular/5.0.13:
     resolution: {integrity: sha512-i/gipMxs7s8L/QeuavPF2hLnJgH6pEZAttySB6aiQLWcX3puWDL3ACVmvBhJGxnAy52Qc15ua26BufY6KpmrVA==}
