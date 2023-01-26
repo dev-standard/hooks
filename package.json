@@ -39,6 +39,9 @@
     "build": "unbuild",
     "prepare": "git config core.hooksPath .git/hooks/ && npx simple-git-hooks"
   },
+  "dependencies": {
+    "fs-extra": "^11.1.0"
+  },
   "devDependencies": {
     "@antfu/eslint-config-ts": "^0.34.1",
     "@commitlint/cli": "^17.4.2",
@@ -46,6 +49,7 @@
     "@commitlint/cz-commitlint": "^17.4.2",
     "@release-it/conventional-changelog": "^5.1.1",
     "@tsconfig/node-lts-strictest": "^18.12.1",
+    "@types/fs-extra": "^11.0.1",
     "@types/node": "^18.11.18",
     "@vitest/coverage-c8": "^0.28.2",
     "commitizen": "^4.3.0",
