@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest'
-import { useJudge } from '../dist/index.mjs'
+import { useJudge } from '../src'
 
 const str = 'test'
 const numInt = 0

@@ -30,8 +30,8 @@
     "dist"
   ],
   "scripts": {
-    "test": "unbuild && vitest",
-    "coverage": "unbuild && vitest run --coverage",
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
     "lint": "eslint .",
     "format": "eslint --fix .",
     "commit": "git-cz",
@@ -47,6 +47,7 @@
     "@release-it/conventional-changelog": "^5.1.1",
     "@tsconfig/node-lts-strictest": "^18.12.1",
     "@types/node": "^18.11.18",
+    "@vitest/coverage-c8": "^0.28.2",
     "commitizen": "^4.3.0",
     "eslint": "^8.32.0",
     "inquirer": "8",
